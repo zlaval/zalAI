@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: zalai
+  mvc:
+    apiversion:
+      enabled: true
+      use:
+        header: Api-Version
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
