@@ -1,11 +1,35 @@
 spring:
   application:
-    name: zalai
-  mvc:
-    apiversion:
-      enabled: true
-      use:
-        header: Api-Version
+    name: ZalAI
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  #  mvc:
+  #    apiversion:
+  #      enabled: false
+  #      use:
+  #        header: Api-Version
+  #   ai:
+  #    openai:
+  #      api-key: ${OPENAI_API_KEY}
+  #      chat:
+  #        options:
+  #          model: gpt-4o
   ai:
-    openai:
-      api-key: ${OPENAI_API_KEY}
+    chat:
+      memory:
+        redis:
+          initialize-schema: false
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: qwen3.5:9b
+          temperature: 0.6
+          num-ctx: 8192
+
+logging.level:
+  org:
+    springframework: DEBUG
+  org.springframework.ai.chat.client.advisor: DEBUG

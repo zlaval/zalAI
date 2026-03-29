@@ -40,3 +40,6 @@ out/
 .kotlin
 
 .env
+/env/qdrant_data/*
+/env/redis_data/*
+/env/valkey_data/*
