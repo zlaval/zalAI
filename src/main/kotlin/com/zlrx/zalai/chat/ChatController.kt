@@ -27,6 +27,7 @@ class ChatController(
         .advisors {
             it.param(ChatMemory.CONVERSATION_ID,id)
         }
+        .tools(NamingTool())
         //.advisors {
         // SimpleLoggerAdvisor(
         //     { request -> "Custom request: " + request?.prompt()?.getUserMessage() },
