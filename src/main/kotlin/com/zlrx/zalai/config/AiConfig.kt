@@ -1,5 +1,6 @@
 package com.zlrx.zalai.config
 
+import com.zlrx.zalai.chat.CURRENT_WEATHER_TOOL
 import org.springframework.ai.chat.client.ChatClient
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor
 import org.springframework.ai.chat.memory.ChatMemory
@@ -21,6 +22,7 @@ class AiConfig {
             .defaultAdvisors(
                 MessageChatMemoryAdvisor.builder(memory).build()
             )
+            .defaultToolNames(CURRENT_WEATHER_TOOL)
             .build()
     }
 
