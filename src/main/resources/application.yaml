@@ -28,6 +28,11 @@ spring:
           model: qwen3.5:9b
           temperature: 0.6
           num-ctx: 8192
+    vectorstore:
+      qdrant:
+        host: localhost
+        port: 6334
+        initialize-schema: true
 
 logging.level:
   org:

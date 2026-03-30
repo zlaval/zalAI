@@ -5,10 +5,12 @@
 ## Start Containers
 
 ## Commands
-#### Pull model
+#### Pull models
 ```shell
 ollama pull qwen3.5:9b
+ollama pull mxbai-embed-large
 ```
+
 
 #### Start model
 ```shell
